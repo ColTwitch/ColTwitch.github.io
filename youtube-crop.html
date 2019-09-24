@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Youtube Clip Viewer</title>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">  
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Colten Wendt</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="about.html">About Me</a></li>
+                <!-- <li><a href="#">Resume</a></li> -->
+                <li class="active"><a href="youtube-crop.html">Youtube Crop</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <row>
+        <div class="col-md-12">
+            <div id="player"></div>
+            <div>
+                <button class="btn" id="play">Play from Url</button>
+                </br> 
+                </br> 
+            </div>
+        </div>
+    </row>
+    <row>
+        <row>
+            <div class="col-sm-12 youtube-input">
+                <div>
+                    <span>Video Id: <input id="vid" type="text" /></span>
+                    <span>Start Time: <input id="start" type="text" /></span>
+                    <span>Clip Length: <input id="length" type="text" /></span>
+                </div>
+                <div>
+                    <p>time format: {x}h{y}m{z}s</p>
+                </div>
+                <div>
+                    <button class="btn" onclick="addUrlParameters()">Add Url Parameters</button>
+                </div>
+            </div>
+        </row>
+        <row>
+            <div class="col-sm-12">
+            </div>
+        </row>
+    </row>
+    <row> 
+        <div class="col-sm-12">
+            </br>  
+            </br>  
+            <p>url parameters:</p>
+            <p>v: video id from youtube</p>
+            <p>t: (optional) start time of video</p>
+            <p>e: (optional) end time of video</p>
+            <p>f: (optional, use in place of 'e') seconds to run video after start</p>
+        </div>
+    </row>
+    
+    <script src="youtube-crop.js"></script>
+</body>
+</html>
